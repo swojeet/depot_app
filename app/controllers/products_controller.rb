@@ -70,7 +70,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @latest_order = @product.orders.order(:updated_at).last
     if stale?(@latest_order)
-      response_to do |format|
+      respond_to do |format|
         format.atom
       end
     end
