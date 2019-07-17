@@ -1,4 +1,4 @@
-require 'pago'
+require "#{Rails.root}/lib/pago"
 
 class Order < ApplicationRecord
   enum pay_type: {
