@@ -5,7 +5,7 @@ class Pago
     when :check
       Rails.logger.info "Processing check: " + 
       payment_details.fetch(:routing).to_s + "/" + 
-      payment_details.fech(:account).to_s
+      payment_details.fetch(:account).to_s
     when :credit_card
       Rails.logger.info "Processing creadit card:"
       payment_details.fetch(:cc_num).to_s + "/" + 
